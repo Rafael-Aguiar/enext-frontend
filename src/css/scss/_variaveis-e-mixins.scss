@@ -1,0 +1,78 @@
+$roxo: #523468;
+$laranja: #d73a1e;
+$cinza: #e6e6e6;
+$cinza-copy: #66666a;
+
+$oswald:'Oswald', sans-serif;
+$pt: 'PT Sans';
+
+@mixin font($size, $fontFamily, $fontWeight) {
+  font-size: $size * 1px;
+  font-family: $fontFamily;
+  font-weight: $fontWeight;
+}
+
+.superinfoContainer {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.superinfoLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  h2 {
+    @include font(32, $oswald, 200);
+    text-transform: uppercase;
+    color: $laranja;
+    span {
+      font-weight: 400;
+    }
+  }
+  p {
+    @include font(14, $pt, 400);
+    text-align: center;
+    font-style: italic;
+    color: $roxo;
+    display: flex;
+    &::after, &::before {
+      content: '';
+      display: block;
+      width: 45px;
+      height: 2px;
+      margin: 5px 2px;
+      background-color: $cinza;
+    }
+  }
+
+}
+
+.superinfoSearch {
+  input {
+    border-radius: 4px;
+    border: 2px solid $cinza;
+  }
+}
+
+.superinfoShipping {
+  text-align: center;
+  @include font (14, $pt, 400);
+  color: $laranja;
+  font-style: italic;
+  .shipping {
+    @include font (20, $pt, 500);
+    padding: 5px;
+  }
+}
+
+.superinfoBag {
+  @include font(20, $pt, 500);
+  text-transform: uppercase;
+  color: $cinza;
+}
