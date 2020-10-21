@@ -1,0 +1,71 @@
+.superinfoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+.superinfoLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  h2 {
+    @include font(32, $oswald, 200);
+    text-transform: uppercase;
+    color: $laranja;
+    span {
+      font-weight: 400;
+    }
+  }
+  p {
+    @include font(14, $pt, 400);
+    text-align: center;
+    font-style: italic;
+    color: $roxo;
+    display: flex;
+    &::after, &::before {
+      content: '';
+      display: block;
+      width: 45px;
+      height: 3px;
+      margin: 5px 2px;
+      background-color: $cinza;
+    }
+  }
+
+}
+
+.superinfoSearch {
+
+  width: 300px;
+  input{
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid $cinza-copy;
+ }
+  }
+
+
+.superinfoShipping {
+  text-align: center;
+  @include font (14, $pt, 400);
+  color: $laranja;
+  font-style: italic;
+  .shipping {
+    @include font (20, $pt, 500);
+    padding: 5px;
+  }
+}
+
+.superinfoBag {
+  @include font(20, $pt, 500);
+  text-transform: uppercase;
+  color: $cinza-copy;
+  .bag-numbers {
+    color: $laranja;
+  }
+}
+

@@ -1,0 +1,86 @@
+footer {
+  background-color: $cinza;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 25px;
+  height: 150px;
+
+}
+
+footer .about {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      @include font(20, $pt, 600);
+      color: $laranja;
+      margin-right: 30px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  p {
+    font-size: .8em;
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+
+    img {
+    cursor: pointer;
+    }
+  }
+}
+
+
+.newsletter {
+  background: white;
+  padding: 25px;
+  height: 100px;
+  border-radius: 10px;
+  width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  font-style: italic;
+
+  small {
+    font-size: 18px;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    input{
+      padding: 5px 10px;
+      width: 70%;
+      border-radius: 5px;
+      border: 2px solid $cinza-copy;
+    }
+
+   button {
+     background: $laranja;
+     @include font(18, $pt);
+     color: #fff;
+     border-radius: 5px;
+     padding: 0 10px;
+     border: 2px solid $cinza-copy;
+   }
+
+  }
+}

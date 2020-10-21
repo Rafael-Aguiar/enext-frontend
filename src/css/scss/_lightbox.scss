@@ -1,0 +1,124 @@
+.lightbox-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    &.ativo {
+    display: flex;
+ 
+}
+
+.lightbox {
+    background: #fff;
+    width: 60%;
+    height: 60%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 50px 0;
+
+    .potion-name, .static-text, .potion-price {
+        @include font(25, inherit, bold );
+        line-height: 30px;
+    } 
+
+    animation: toggleModal .5s;
+}
+
+.potion-image-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-lightbox {
+    width: 100%;
+}
+
+.potion-description {
+    height: 90%;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // border: 2px solid blue;
+}
+
+.potion-ingredients {
+    margin: 20px 0;
+
+    span{
+        display: block;
+        padding-bottom: 20px;
+        
+    }
+
+    li {
+        margin-top: 5px;
+    }
+
+}
+
+.potion-price {
+    color: $laranja;
+}
+
+.potion-buy-button {
+    height: 50px;
+    width: 200px;
+    
+    background: $laranja;
+    color: #fff;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    border: none;
+    border-radius: 6px;
+}
+
+.close-lightbox {
+    display: block;
+    position: absolute;
+    top: 14%;
+    right: 20%;
+
+    padding: 15px;
+    
+
+    animation: none;
+
+    @include font(30, $pt, bold);
+
+    color: $cinza-copy;
+
+    &:hover {
+        color: $laranja;
+        transition: .2s;
+        cursor: pointer;
+    }
+}
+}
+
+@keyframes toggleModal{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

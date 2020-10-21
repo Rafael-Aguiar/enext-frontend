@@ -1,0 +1,54 @@
+nav {
+  ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 2rem;
+  background-color: $roxo;
+  padding: 0px 50px;
+  box-sizing: border-box;
+  }
+  
+  li {
+    font-size: 14px;
+    color: white;
+    text-transform: capitalize;
+    font-style: italic;
+    padding: .5rem 1.5rem .5rem .5rem ;
+    cursor: pointer;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0; 
+      height: 0; 
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid white;
+      margin-left: 10px;
+      margin-top: 5px;
+      text-align: center;
+    }
+
+    &:hover {
+      background-color: darken($roxo, 10);
+      transition: .5s;
+    }
+
+    &:last-child {
+      width:  25%;
+      text-align: center;
+      span {
+        text-transform: lowercase;
+        color: lighten($roxo, 40) ;
+      }
+      &::after {
+        display: none;
+      }
+      &:hover {
+        background-color: $roxo;
+      }
+    }
+  }
+}
+
